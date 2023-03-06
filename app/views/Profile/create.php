@@ -9,6 +9,6 @@
     <input type="submit" name="action" value="Create">
 </form>
 
-<a href="/eComH23S3/User/profile">Back</a>
+<a href="/User/profile">Back</a>
 
 <?php $this->view('shared/footer'); ?>
