@@ -9,7 +9,7 @@
     <dd><img src="/eComH23S3/app/images/<?= $data->picture?>"></dd>
 </dl>
 
-<a href="/eComH23S3/Profile/edit">Edit my profile</a>
-<a href="/eComH23S3/User/profile">Back</a>
+<a href="/Profile/edit">Edit my profile</a>
+<a href="/User/profile">Back</a>
 
 <?php $this->view('shared/footer'); ?>
