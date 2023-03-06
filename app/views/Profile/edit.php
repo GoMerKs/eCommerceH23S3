@@ -10,6 +10,6 @@
     
 </form>
 
-<a href="/eComH23S3/Profile/index">Back</a>
+<a href="/Profile/index">Back</a>
 
 <?php $this->view('shared/footer'); ?>
