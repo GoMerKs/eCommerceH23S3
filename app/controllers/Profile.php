@@ -9,7 +9,7 @@ class Profile extends \app\core\Controller {
             $this->view('Profile/index', $profile);
         }
         else {
-            header('location:/eComH23S3/Profile/create');
+            header('location:/Profile/create');
         }
     }
 
@@ -31,10 +31,10 @@ class Profile extends \app\core\Controller {
             $success = $profile->insert();
 
             if($success) {
-                header('location:/eComH23S3/Profile/index?success= Profile Created!'.$uploadMessage);
+                header('location:/Profile/index?success= Profile Created!'.$uploadMessage);
             }
             else {
-                header('location:/eComH23S3/Profile/index?error=Something went wrong. You can have only have one profile.'.$uploadMessage);
+                header('location:/Profile/index?error=Something went wrong. You can have only have one profile.'.$uploadMessage);
             }
         }
         else {
@@ -63,10 +63,10 @@ class Profile extends \app\core\Controller {
             $success = $profile->update();
 
             if($success) {
-                header('location:/eComH23S3/Profile/index?success=Profile Data Edited!'.$uploadMessage);
+                header('location:/Profile/index?success=Profile Data Edited!'.$uploadMessage);
             }
             else {
-                header('location:/eComH23S3/Profile/index?error=Something went wrong. '.$uploadMessage);
+                header('location:/Profile/index?error=Something went wrong. '.$uploadMessage);
             }
        }
         else {
