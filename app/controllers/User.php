@@ -1,6 +1,7 @@
 <?php
 namespace app\controllers;
 
+//this is a class attribute
 class User extends \app\core\Controller{
 
 	public function index(){//login page
@@ -50,17 +51,17 @@ class User extends \app\core\Controller{
 		header('location:/User/index');
 	}
 
+	#[\app\filters\Login]
 	public function profile(){
-		if(!isset($_SESSION['user_id'])){
-			header('location:/User/index');
-			return;
-		}
 		$message = new \app\models\Message();
 		$messages = $message->getAllForUser($_SESSION['user_id']);
 		$this->view('User/profile',$messages);
 	}
 
-
+	#[\app\filters\Login]
+	public function somethingSecret(){
+		echo "If you see this, you are logged in";
+	}
 
 
 }
